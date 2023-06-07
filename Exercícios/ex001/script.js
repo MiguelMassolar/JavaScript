@@ -1,21 +1,15 @@
-var num1 = prompt('Digite um número: ');
-var operacao = prompt('Digite soma ou sub: ');
-var num2 = prompt('Digite um novo número: ');
-
-function calc(){
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
-
-    var res = 0;
-
-    if (operacao == 'soma'){
-        res = num1 + num2;
-    }
-
-    if(operacao == 'sub'){
-        res = num1 - num2;
-    }
-
-    return res;
+function modifica(){
+    document.getElementById('texto').style.background = '#FFFF00'
 }
-document.write(`O resultado da operação é: ${calc(num1, num2, operacao)}`);
+
+function validaCampo(){
+    var valorCampo = document.getElementById('texto').value
+
+    if(valorCampo <= 3) {
+        document.getElementById('texto').style.background = '#FF0000'
+    } 
+    
+    if(valorCampo >= 4){
+        document.getElementById('texto').style.background = '#00FF00'
+    }
+}
